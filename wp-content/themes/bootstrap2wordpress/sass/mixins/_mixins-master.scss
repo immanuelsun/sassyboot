@@ -1,0 +1,57 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+
+/* ==================================================
+   ! Custom Mixins
+   ================================================== */
+
+   @mixin sexytext() {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegitibility;
+}
+
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  background: $color;
+  -webkit-border-radius: $width/2;
+  -moz-border-radius: $width/2;
+  border-radius: $width/2;
+}
+
+@mixin vertical-align {
+ position: relative;
+ top: 50%;
+ -webkit-transform: translateY(-50%);
+ -ms-transform: translateY(-50%);
+ transform: translateY(-50%);
+}
+
+@mixin bordered-title {
+    border-bottom: 1px solid $border;
+    margin-bottom: .5em;
+    padding-bottom: 1em;
+}
+

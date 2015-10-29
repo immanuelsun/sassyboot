@@ -1,0 +1,18 @@
+button,
+.btn,
+a.btn,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include sexytext;
+    color: $white;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+.btn-danger {
+    background-color: $danger;
+    border-color: $btn-border;
+}

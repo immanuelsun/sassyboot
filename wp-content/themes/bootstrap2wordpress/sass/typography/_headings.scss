@@ -1,0 +1,33 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include sexytext;
+    font-family: $bold;
+}
+
+h1 {
+    font-size: $h1;
+}
+
+h1,
+h2 {
+    margin: $default;
+    font-weight: bold;
+    // letter-spacing: 1px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: $title;
+    font-weight: normal;
+}
+
+h1.page-title {
+    font-size: $h1*1.5;
+    letter-spacing: 1px;
+}

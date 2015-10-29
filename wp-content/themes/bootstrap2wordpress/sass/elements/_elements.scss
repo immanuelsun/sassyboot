@@ -1,0 +1,94 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: url("assets/img/tile.jpg") top left repeat; /* Fallback for when there is no custom background color defined. */
+    font-family: $body;
+}
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+@import "tables";
+
+
+/* icons */
+i.ci {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background:  url(assets/img/icon-sprite.png) no-repeat;
+}
+
+.ci.ci-computer { background-position: 0 0; }
+.ci.ci-watch { background-position: -40px 0; }
+.ci.ci-calendar { background-position: -80px 0; }
+.ci.ci-community { background-position: -120px 0; }
+.ci.ci-instructor { background-position: -160px 0; }
+.ci.ci-device { background-position: -200px 0; }
+
+/* Modal */
+.modal-content {
+    background: url(assets/img/tile.jpg) top left repeat;
+}
+
+/* social icons */
+.badge.social {
+    color: $white;
+    font-size: 20px;
+    padding-top: 10px;
+
+    &.twitter {
+        @include circle(40px, $twitter);
+
+        &:hover {
+            color: $twitter;
+            background: $icon-bg;
+        }
+    }
+
+    &.facebook {
+        @include circle(40px, $facebook);
+
+        &:hover {
+            color: $facebook;
+            background: $icon-bg;
+        }
+    }
+
+    &.google-plus {
+        @include circle(40px, $google-plus);
+
+        &:hover {
+            color: $google-plus;
+            background: $icon-bg;
+        }
+    }
+}
