@@ -1,0 +1,92 @@
+/*  ! Post
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.post {
+    background:            $white;
+    border:                1px solid $border;
+    margin-bottom:         40px;
+    -webkit-border-radius: 4px;
+    border-radius:         4px;
+}
+
+
+.post header {
+    padding: 0 2em 0 1.4em;
+    position: relative;
+
+    .post-details {
+        font-size: 0.85em;
+        margin-right: 4em;
+        color: lighten($gray, 40%);
+
+        i.fa {
+            margin-left: .5em;
+            margin-right: .2em;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.post-comments-badge {
+    @include circle(70px, $green);
+    position: absolute;
+    top: .5em;
+    right: 1em;
+    text-align: center;
+
+    .post-comments-link {
+        @include vertical-align;
+
+        a {
+           color: #FFF;
+           font-size: 1.4rem;
+           @include sexytext;
+
+           i.fa {
+                   display: block;
+            }
+        }
+
+        a:hover {
+            color: $salmon;
+        }
+    }
+}
+
+.single .post-comments-badge {
+    @extend .post-comments-badge;
+
+    top: 2em;
+}
+
+.post-excerpt,
+.post-body,
+.comments-wrap {
+    padding: 0 1.4em 2em;
+}
+
+.post-image img {
+    margin: 1.4em 0;
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+}
+
+
+.post-edit-link {
+    display: inline-block;
+}
+
+.moretag {
+    float: right;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.posts-navigation {
+    @extend .post;
+
+    padding: 10px 5px 25px;
+}

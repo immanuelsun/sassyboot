@@ -1,6 +1,89 @@
-.nav > li {
-	float: left;
+/*  ! Primary Menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.nav {
+
+	li {
+		float: left;
+		color: $white;
+		font-size: 1.4em;
+
+		a {
+			font-size: 14px;
+			color: $white;
+			margin-left: 2px;
+			display: inline-block;
+		}
+
+		&:hover {
+			a {
+				color: $salmon;
+			}
+		}
+	}
 }
+
+.navbar-menu {
+	margin-top: 8px;
+}
+
+.dropdown-menu {
+	margin: 0;
+	padding: 0;
+
+	-webkit-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+
+	li {
+		padding: 0;
+		float: none;
+		text-align: left;
+		padding-left: 0 10px;
+
+		&:hover {
+			background: $light-blue;
+
+			&:last-child {
+				-webkit-border-radius: 0 0 10px 10px;
+				border-radius: 0 0 10px 10px;
+			}
+		}
+
+		a {
+			margin: 0;
+			padding: 10px;
+
+			&:hover {
+				background: none;
+				color: $gray;
+			}
+		}
+	}
+}
+
+li.current_page_item {
+	background: $gray;
+
+	a {
+		color: $light-gray;
+	}
+
+	&:hover {
+		a {
+			color: $salmon;
+		}
+	}
+}
+
+li.current-menu-ancestor li.current_page_item {
+	background: $salmon;
+
+	a,
+	a:hover {
+		background: none;
+		color: $white;
+	}
+}
+
 
 /* Small menu. */
 .menu-toggle,
@@ -40,4 +123,12 @@
 
 .logged-in .navbar-fixed-top {
 	top: 32px;
+}
+
+/*  ! Sidebar Menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#menu-sidebar-menu {
+	.sub-menu {
+		margin: 5px 0 5px 20px;
+	}
 }

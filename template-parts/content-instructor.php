@@ -21,7 +21,9 @@ $num_courses = get_field('num_courses');
             <div class="col-sm-8 col-md-6">
                 <div class="row">
                     <div class="col-lg-8">
-                        <h2><?php echo $instructor_section_title;; ?> <br /> <small><?php echo $instructor_name; ?></small></h2>
+                       <div class="section-header">
+                            <h2><?php echo $instructor_section_title;; ?> <br /> <small><?php echo $instructor_name; ?></small></h2>
+                       </div><!-- /.section-header -->
                     </div><!-- /.col-lg-8 -->
                     <div class="col-lg-4">
                         <?php if ( !empty( $twitter_username ) ) { ?>

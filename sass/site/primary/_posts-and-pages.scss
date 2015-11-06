@@ -19,10 +19,17 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1.5em 20px 0;
 }
 
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+.entry-footer {
+    padding: 10px 20px;
+
+    .comments-link {
+        float: right;
+    }
+
+    a {
+        color: lighten($salmon, 10%);
+    }
 }

@@ -5,29 +5,76 @@ h4,
 h5,
 h6 {
     @include sexytext;
-    font-family: $bold;
+    font-family: $title;
 }
 
-h1 {
-    font-size: $h1;
-}
 
 h1,
 h2 {
     margin: $default;
     font-weight: bold;
-    // letter-spacing: 1px;
 }
 
 h3,
 h4,
 h5,
 h6 {
-    font-family: $title;
     font-weight: normal;
 }
 
-h1.page-title {
-    font-size: $h1*1.5;
-    letter-spacing: 1px;
+.page-title {
+    font-family: $body;
+    font-size: $h1*1.4;
+}
+
+.feature-image  {
+
+    .page-title {
+        font-family: $bold;
+        letter-spacing: 1px;
+    }
+
+    .taxonomy-description {
+        color: $border;
+        font-size: 1.2em;
+        font-style: italic;
+        letter-spacing: .5px;
+    }
+}
+
+.widget-title {
+    font-family: $title;
+    font-weight: normal;
+    margin-bottom: 1em;
+
+    @include bordered-title;
+}
+
+.entry-title {
+    @include bordered-title;
+    font-family: $title;
+}
+
+.section-header {
+    h2 {
+        font-family: $bold;
+    }
+}
+
+#comments {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @include sexytext;
+        font-family: $body;
+    }
+
+    .comments-title {
+        text-align: center;
+        font-family: $bold;
+        font-size: 3em;
+    }
 }

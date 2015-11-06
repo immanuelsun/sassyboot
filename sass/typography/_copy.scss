@@ -1,3 +1,15 @@
+body {
+    font-family: $body;
+}
+
+p,
+li,
+dd,
+th,
+td {
+     line-height: 2.4rem;
+}
+
 p {
     margin: 0 0 15px;
 }
@@ -6,13 +18,25 @@ p.lead {
     font-weight: normal;
 }
 
-dfn, cite, em, i {
-	font-style: italic;
+blockquote, q {
+    quotes: "" "";
+
+    &:before,
+    &:after {
+        content: "";
+    }
 }
 
 blockquote {
     text-align: left;
     border: none;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    font-size: 1.6rem;
+    color: lighten( $salmon, 10%);
+    background: $light-blue;
+    padding: 20px;
+    margin-left: 20px;
 
     &::before {
         display: none;
@@ -23,6 +47,10 @@ blockquote {
         display: block;
         margin-top: 10px;
     }
+}
+
+dfn, cite, em, i {
+    font-style: italic;
 }
 
 address {

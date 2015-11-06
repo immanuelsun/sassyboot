@@ -1,0 +1,22 @@
+.feature-image {
+    width: 100%;
+    text-align: center;
+
+    h1.page-title {
+        color: $white;
+    }
+}
+
+.feature-image-default {
+    background: url(assets/img/stuff-feature.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.feature-image-default-alt {
+    background: url(assets/img/hipster-stuff.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

@@ -1,0 +1,77 @@
+/*  ! Comments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#comments {
+    margin-top: 5em;
+
+    @extend .post;
+
+    ol, ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            background: rgba(0, 0, 0, 0.02);
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        ol.children {
+            padding: 0;
+            margin-left: 2em;
+            font-size: 0.96em;
+        }
+    }
+
+    .leave-comment {
+        margin-top: 60px;
+        padding: 20px 0 0;
+        border-top: 1px solid #eee;
+
+        form {
+            margin-top: 20px;
+        }
+    }
+
+    footer {
+        background: none;
+        color: inherit;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    .comment-metadata {
+        margin-top: 10px;
+        font-size: 0.8em;
+        color: $light-text;
+        font-style: italic;
+    }
+}
+
+.comment-navigation {
+    margin: 20px;
+}
+
+.comments-wrap {
+    hr {
+        margin: 80px 0 30px 0;
+    }
+}
+
+.form-submit input[type="submit"] {
+    @extend .btn-success;
+    border: none;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    font-size: 0.8em;
+
+    &:hover,
+    &:focus {
+        border: none;
+    }
+}

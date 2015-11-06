@@ -1,0 +1,96 @@
+
+/* ==================================================
+   ! Media Queries
+   ================================================== */
+   /* Medium devices (desktops, 992px and less) */
+   @media screen and (max-width: $screen-md-min) {
+    .logo {
+        width: 50%;
+    }
+
+    #instructor .container {
+        background: rgba(255, 255, 255, .8);
+        padding: 20px;
+    }
+
+    #kudos {
+        .testimonial {
+            img {
+                width: 50%;
+                margin-bottom: 2em;
+            }
+        }
+    }
+
+    #featurette {
+        iframe {
+            max-width: 100%;
+            height: ($screen-md-min*.3);
+        }
+    }
+
+    footer {
+        text-align: center;
+
+        .footer-menu {
+            margin: 20px 0;
+        }
+
+        .signup-link {
+            margin-top: 10px;
+        }
+
+        .copyright {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}
+
+
+/* 768px < width < 992px) */
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    footer {
+        text-align: center;
+
+        .signup-link {
+            display: block;
+            margin-top: 4px;
+        }
+
+        .copyright {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}
+
+/* Fix the WordPress toolbar when logged in */
+@media screen and (max-width: 782px) {
+    .logged-in .navbar-fixed-top {
+        top: 46px;
+    }
+}
+
+
+/* Small devices (iPhone, < 768px) */
+@media screen and (max-width: $screen-sm-max) {
+    .resource {
+        width: 48%;
+        margin-right: 2%;
+        margin-bottom: 40px;
+
+        &:nth-child(3n) {
+            clear: left;
+        }
+    }
+}
+
+/* Extra Small devices (iPhone, < 480px) */
+@media (max-width: $screen-xs-max) {
+    .resource {
+        width: 100%;
+        min-height: 0;
+        margin-bottom: 40px;
+    }
+}

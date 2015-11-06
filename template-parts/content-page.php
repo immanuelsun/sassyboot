@@ -8,34 +8,33 @@
  */
 
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+		<?php the_title( sprintf( '<h3 class="entry-title">', esc_url( get_permalink() ) ), '</h3>' ); ?>
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bootstrap2wordpress' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+		<?php if ( 'post' === get_post_type() ) : ?>
+               <div class="post-details">
+                <i class="fa fa-user"></i> <?php the_author_posts_link(); ?>
+                <i class="fa fa-clock-o"></i> <time> <?php the_date(); ?></time>
+                <i class="fa fa-folder-open-o"></i> <?php the_category( ', ' ); ?>
+                <i class="fa fa-tags"></i> <?php the_tags(); ?>
+                <?php edit_post_link( 'Edit', '<i class="fa fa-pencil"></i> ', '' ); ?>
+                <div class="post-comments-badge">
+                    <div class="post-comments-link">
+                        <a href="<?php comments_link(); ?>"><i class="fa fa-comments"></i> <?php comments_number( 0, 1, '%'); ?></a>
+                    </div><!-- /.post-comments-link -->
+                </div><!-- /.post-comments-badge -->
+            </div><!-- /.post-details -->
 
-	<footer class="entry-footer">
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'bootstrap2wordpress' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer><!-- .entry-footer -->
+    <?php endif; ?>
+    </header><!-- .entry-header -->
+
+    <div class="post-image">
+        <?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+    </div><!-- /.post-image -->
+
+    <div class="post-excerpt">
+        <p><?php the_content( );; ?></p>
+    </div><!-- /.post-excerpt -->
+
 </article><!-- #post-## -->
-

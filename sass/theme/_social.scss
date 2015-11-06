@@ -1,0 +1,34 @@
+
+/* social icons */
+.badge.social {
+    color: $white;
+    font-size: 20px;
+    padding-top: 10px;
+
+    &.twitter {
+        @include circle(40px, $twitter);
+
+        &:hover {
+            color: $twitter;
+            background: $icon-bg;
+        }
+    }
+
+    &.facebook {
+        @include circle(40px, $facebook);
+
+        &:hover {
+            color: $facebook;
+            background: $icon-bg;
+        }
+    }
+
+    &.google-plus {
+        @include circle(40px, $google-plus);
+
+        &:hover {
+            color: $google-plus;
+            background: $icon-bg;
+        }
+    }
+}

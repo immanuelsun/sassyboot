@@ -3,8 +3,10 @@
 <section id="kudos">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-                <h2>What People Are Saying About Us</h2>
+            <div class="col-sm-8 col-sm-offset-2 ">
+                <div class="section-header">
+                    <h2 class="">What People Are Saying About Us</h2>
+                </div><!-- /.section-header -->
 
                 <!-- Testimonials -->
                 <?php

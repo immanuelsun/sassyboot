@@ -20,35 +20,39 @@
     ================================================== -->
     <footer>
         <div class="container">
-            <div class="col-sm-3">
+            <div class="col-sm-2">
                 <p><a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Bootstrap to WordPress" /></a></p>
             </div><!-- /.col-sm-3 -->
             <div class="col-sm-6">
-                <ul class="footer-menu list-unstyled list-inline">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Resources</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li class="signup-link"><a href="" class="btn btn-xs btn-success">Sign up now!</a></li>
-                </ul><!-- /.list-unstyled list-inline -->
+
+                <?php
+                wp_nav_menu( array(
+                    'menu'              => 'footer',
+                    'theme_location'    => 'footer',
+                    'container'         => 'nav',
+                    'menu_class'        => 'footer-menu list-unstyled list-inline',
+                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                    'walker'            => new wp_bootstrap_navwalker())
+                );
+                ?>
             </div><!-- /.col-sm-6 -->
-            <div class="col-sm-3">
-                <p class="copyright">&copy; 2015 |  <a href="/">New Streams Design</a></p><!-- /.pull-right -->
+            <div class="col-sm-4">
+                <p class="copyright"><?php bloginfo( 'name' ); ?> &copy; <?php echo date('Y'); ?> | <a href="http://www.newstreamsstudio.com">New Streams Studio</a></p><!-- /.pull-right -->
             </div><!-- /.col-sm-3 -->
         </div><!-- /.container -->
     </footer>
 
 
 <!-- ! Core scripts
-================================================== -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="<?php bloginfo('template_directory') ; ?>/assets/js/jquery-2.1.4.min.js"></script>
-<script src="<?php bloginfo('template_directory') ; ?>/assets/js/bootstrap.min.js"></script>
-<script src="<?php bloginfo('template_directory') ; ?>/assets/js/main.js"></script>
+    ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="<?php bloginfo('template_directory') ; ?>/assets/js/jquery-2.1.4.min.js"></script>
+    <script src="<?php bloginfo('template_directory') ; ?>/assets/js/bootstrap.min.js"></script>
+    <script src="<?php bloginfo('template_directory') ; ?>/assets/js/main.js"></script>
 
-<!-- TypeKit Font -->
+    <!-- TypeKit Font -->
 <!-- <script src="https://use.typekit.net/inz8twa.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script> -->
+    <script>try{Typekit.load({ async: true });}catch(e){}</script> -->
 
 </body>
 </html>

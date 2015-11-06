@@ -9,20 +9,24 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+	<section class="feature-image feature-image-default-alt" data-type="background" data-speed="2">
+		<?php
+		the_archive_title( '<h1 class="page-title">', '</h1>' );
+		the_archive_description( '<small class="taxonomy-description">', '</small>' );
+		?>
+	</section><!-- /.feature-image feature-image-default-alt -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+	<div class="container">
+		<div class="row" id="primary">
+			<!-- ! Main Content
+			================================================== -->
+			<main id="content" class="col-sm-8" role="main">
+
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
 
@@ -32,20 +36,28 @@ get_header(); ?>
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', get_post_format() );
-				?>
+					?>
 
-			<?php endwhile; ?>
+				<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+				<?php the_posts_navigation(); ?>
 
-		<?php else : ?>
+			<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- /#content.col-sm-8 -->
 
-<?php get_sidebar(); ?>
+	<!-- ! Sidebar
+	================================================== -->
+	<aside class="col-sm-4">
+
+		<?php get_sidebar(); ?>
+
+	</aside>
+</div><!-- /#primary.row -->
+</div><!-- /.container -->
+
 <?php get_footer(); ?>

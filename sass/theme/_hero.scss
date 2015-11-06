@@ -1,0 +1,73 @@
+
+/* ==================================================
+   ! Hero
+   ================================================== */
+   #hero {
+    background: url(assets/img/hero-bg.jpg) 50% 0 repeat fixed;
+    padding: 40px 0;
+    min-height: 500px;
+    color: $white;
+    @include sexytext;
+
+    article {
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-top: 30px;
+
+        h1 {
+            font-family: $bold;
+        }
+
+        .lead {
+            font-weight: 400;
+        }
+    }
+
+    .price-timeline {
+        margin: 30px 0 60px;
+        text-align: center;
+
+        .price {
+            display: inline-block;
+            margin: 0 2% 0 0;
+            background: $gray;
+            width: 30%;
+            padding: 10px 20px 30px;
+            position: relative;
+            vertical-align: top;
+
+            span {
+                display: block;
+                height: 70px;
+                width: 70px;
+                font-size: $h5;
+                font-weight: bold;
+                text-align: center;
+                line-height: 70px;
+                background: $dark;
+                -webkit-border-radius: 100%;
+                border-radius: 100%;
+                position: absolute;
+                bottom: -35px;
+                left: 50%;
+                margin-left: -35px;
+            }
+        }
+
+        .active {
+            background: $salmon;
+        }
+
+        h4 {
+            margin: 0 0 10px;
+        }
+
+        small {
+            color: $white;
+            font-weight: 400;
+            display: block;
+        }
+    }
+}

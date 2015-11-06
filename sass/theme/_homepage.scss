@@ -1,0 +1,100 @@
+/*  ! Home Page
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#optin {
+    padding: 20px 0;
+    background: $gray;
+    color: $white;
+    @include sexytext;
+
+    p {
+        margin-top: 7px;
+    }
+}
+
+#who-benefits {
+    background: $white;
+}
+
+#course-features {
+    background: $gray;
+    color: $white;
+    text-align: center;
+
+    h4 {
+        font-weight: 400;
+    }
+}
+
+#project-features {
+    text-align: center;
+}
+
+#featurette {
+    background: url(assets/img/stuff-bg.jpg) 50% 100% repeat fixed;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    text-align: center;
+    color: $white;
+}
+
+#instructor {
+    background: $white url(assets/img/brad-elvis.png) 90% -10px no-repeat;
+
+    h2 {
+        margin: -20px 0 20px;
+    }
+
+    .num {
+        @include circle(140px, $salmon);
+        @include sexytext();
+
+        color: $white;
+        font-size: 1.8em;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1em;
+
+        span {
+            display: block;
+            font-size: .7em;
+            font-weight: 400;
+
+        }
+
+        .num-content {
+            @include vertical-align;
+        }
+    }
+}
+
+#kudos {
+    text-align: center;
+
+    .testimonial {
+        margin-bottom: 60px;
+
+        img {
+            @include circle(100%, transparent);
+        }
+    }
+}
+
+#signup {
+    text-align: center;
+    color: $white;
+    background: url(assets/img/hipster-stuff.jpg) center center repeat fixed;
+
+    h2 {
+        font-weight: normal;
+
+        strong {
+            border-bottom: 2px solid $salmon;
+        }
+    }
+
+    .btn {
+        font-size: 1.6em;
+    }
+}

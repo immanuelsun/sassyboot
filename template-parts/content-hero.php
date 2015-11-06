@@ -39,7 +39,7 @@ $hero_button_text  = get_post_meta($id, 'hero_button_text', true );
                             <span><?php echo $final_price; ?></span>
                         </div><!-- /.price -->
                     </div><!-- /.price-timeline -->
-                    <p><a href="<?php echo $course_url; ?>" class="btn btn-lg btn-danger" roll="button"><?php echo $hero_button_text; ?></a></p>
+                    <p><a href="<?php echo $course_url; ?>" class="btn btn-lg btn-success" roll="button"><?php echo $hero_button_text; ?></a></p>
                 </div><!-- /.col-sm-7 hero-text -->
             </div><!-- /.row -->
         </div><!-- /.container -->

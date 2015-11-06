@@ -12,26 +12,26 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
- <!-- Custom CSS -->
-<link rel="stylesheet" href="style.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-<?php wp_head(); ?>
+    <?php wp_head(); ?>
 
-<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and meida queries -->
+    <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and meida queries -->
 <!-- [if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-<! [endif]-->
+    <! [endif]-->
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bootstrap2wordpress' ); ?></a>
+    <div id="page" class="hfeed site">
+       <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bootstrap2wordpress' ); ?></a>
 
 <!-- ! Header
     ================================================== -->
@@ -40,7 +40,7 @@
         <!-- Nav Bar -->
         <div class="navbar-wrapper">
             <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-             <div class="container">
+               <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
@@ -51,25 +51,22 @@
                     <a href="/" class="navbar-brand"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="Bootstrap to Wordpress" /></a>
                 </div><!-- /.navbar-header -->
 
-                <?php
-                	   /**
-                		* Displays a navigation menu
-                		* @param array $args Arguments
-                		*/
-                		$args = array(
-                			'theme_location' => 'primary',
-                			'menu' => '',
-                			'container' => 'nav',
-                			'container_class' => 'navbar-collapse collapse',
-                			'container_id' => '',
-                			'menu_class' => 'nav navbar-menu navbar-right'
-                		);
+                        <?php
+                        wp_nav_menu( array(
+                            'menu'              => 'primary',
+                            'theme_location'    => 'primary',
+                            'depth'             => 2,
+                            'container'         => 'nav',
+                            'container_class'   => 'collapse navbar-collapse',
+                            'container_id'      => '',
+                            'menu_class'        => 'nav navbar-menu navbar-right',
+                            'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                            'walker'            => new wp_bootstrap_navwalker())
+                        );
+                        ?>
+                    </div><!-- /.container -->
+                </div><!-- /.navbar navbar-inverse navbar-fixed-top -->
+            </div><!-- /.navbar-wrapper -->
 
-                		wp_nav_menu( $args );
-                ?>
-            </div><!-- /.container -->
-        </div><!-- /.navbar navbar-inverse navbar-fixed-top -->
-    </div><!-- /.navbar-wrapper -->
-
-</header>
+        </header>
 

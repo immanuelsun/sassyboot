@@ -10,7 +10,9 @@ $project_feature_body = get_field('project_feature_body');
 <section id="project-features">
     <div class="container">
 
-        <h2><?php echo $project_feature_title; ?></h2>
+        <div class="section-header">
+            <h2><?php echo $project_feature_title; ?></h2>
+        </div><!-- /.section-header -->
         <p class="lead">
             <?php echo $project_feature_body; ?>
         </p><!-- /.lead -->

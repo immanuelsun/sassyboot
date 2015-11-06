@@ -1,4 +1,5 @@
-a {
+a,
+.dropdown-menu > li > a {
     color: $salmon;
 
     &:hover {
@@ -6,3 +7,4 @@ a {
         text-decoration: none;
     }
 }
+

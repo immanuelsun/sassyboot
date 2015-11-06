@@ -20,7 +20,7 @@
                 <div class="form-group">
                     <input type="email" class="form-control" id="subscribe-email" placeholder="Your Email Address">
                 </div>
-                <input type="submit" class="btn btn-danger" value="Subscribe" />
+                <input type="submit" class="btn btn-success" value="Subscribe" />
             </form>
 
             <hr />

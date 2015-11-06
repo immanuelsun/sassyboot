@@ -1,0 +1,43 @@
+/*  ! Footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+footer {
+    background: $gray;
+    color: $white;
+    padding: 20px 0 10px;
+    font-size: 0.8em;
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        color: $white;
+
+        &:visited {
+            color: $white;
+        }
+
+        &:hover {
+            color: $salmon;
+            text-decoration: none;
+        }
+    }
+
+    li.btn {
+        font-size: 0.9em;
+        margin-left: 2em;
+        padding: 3px 10px;
+    }
+
+    .copyright {
+        text-align: right;
+
+        a {
+            color: $salmon;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}
