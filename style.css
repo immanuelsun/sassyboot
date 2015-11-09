@@ -8477,7 +8477,6 @@ li.current-menu-ancestor li.current_page_item {
   background: #dd5638; }
   li.current-menu-ancestor li.current_page_item a,
   li.current-menu-ancestor li.current_page_item a:hover {
-    background: none;
     color: white; }
 
 /* Small menu. */
@@ -8913,7 +8912,7 @@ section.main-content {
   font-style: italic; }
 
 .posts-navigation {
-  padding: 10px 5px 25px; }
+  padding: 10px 20px 25px; }
 
 /*  ! Pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
